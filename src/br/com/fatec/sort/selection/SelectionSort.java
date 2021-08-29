@@ -2,6 +2,8 @@ package br.com.fatec.sort.selection;
 
 import br.com.fatec.sort.utils.Utils;
 
+import static br.com.fatec.sort.utils.Utils.swap;
+
 public class SelectionSort {
     static void sort(int arr[]) {
 //        Initialize 3 new variables. Counter, Traversing index, Minimum index;
@@ -20,9 +22,7 @@ public class SelectionSort {
                 }
             }
 //            After traversing the whole list, we swap the values counting at the Counter and the Minimum Index;
-            int temp = arr[counter];
-            arr[counter] = arr[minimumIndex];
-            arr[minimumIndex] = temp;
+            swap(arr, counter, minimumIndex);
         }
 
     }
